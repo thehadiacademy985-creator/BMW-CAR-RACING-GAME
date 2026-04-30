@@ -1,61 +1,513 @@
-Create a modern, responsive gaming website for a 3D racing game called “BMW CAR RACING GAME”.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW CAR RACING GAME - Experience High-Speed 3D Racing</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <span>BMW RACING</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#cars" class="nav-link">Cars</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#download" class="nav-link">Download</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-Website Requirements:
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <canvas id="raceTrackCanvas"></canvas>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-title-wrapper">
+                <h1 class="hero-title">BMW CAR RACING GAME</h1>
+                <div class="title-underline"></div>
+            </div>
+            <p class="hero-subtitle">Experience High-Speed 3D Racing in the Streets of NYC</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('download')">
+                    <span class="btn-icon"><i class="fas fa-play"></i></span>
+                    <span>Play Now</span>
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('download')">
+                    <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    <span>Download Game</span>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>3</h3>
+                    <p>Lap Races</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4</h3>
+                    <p>Premium Cars</p>
+                </div>
+                <div class="stat-item">
+                    <h3>NYC</h3>
+                    <p>Racing Track</p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
 
-1. Homepage:
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About The Game</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>BMW CAR RACING GAME</h3>
+                    <p>
+                        Immerse yourself in the ultimate high-speed racing experience. Our 3D racing game brings the 
+                        thrilling streets of New York City to life with stunning graphics and realistic driving physics.
+                    </p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>3-Lap Racing System</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Realistic Driving Physics</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Stunning City Environment</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Competitive Racing Experience</span>
+                        </div>
+                    </div>
+                    <p>
+                        Compete against AI opponents in a dynamic environment where every lap counts. Master the tracks,
+                        optimize your racing lines, and become the ultimate champion of NYC's fastest racing circuit.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <div class="placeholder-content">
+                            <i class="fas fa-gamepad"></i>
+                            <p>3D Racing Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-A bold hero section with a high-quality 3D racing banner set in New York City
-Title: BMW CAR RACING GAME
-Subtitle: Experience High-Speed 3D Racing in the Streets of NYC
-Add a “Play Now” button and “Download Game” button
-Background animation or video of racing cars (BMW M4, BMW M5, Lamborghini, Porsche 911)
+    <!-- Cars Section -->
+    <section id="cars" class="cars">
+        <div class="container">
+            <h2 class="section-title">Featured Cars</h2>
+            <div class="cars-grid">
+                <!-- BMW M4 -->
+                <div class="car-card">
+                    <div class="car-image">
+                        <div class="car-placeholder bmw-m4">
+                            <i class="fas fa-car"></i>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3>BMW M4</h3>
+                        <p class="car-description">High-performance sports car with exceptional handling</p>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-label">Top Speed</span>
+                                <div class="spec-bar">
+                                    <div class="spec-fill" style="width: 85%;"></div>
+                                </div>
+                                <span class="spec-value">305 km/h</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Acceleration</span>
+                                <div class="spec-bar">
+                                    <div class="spec-fill" style="width: 90%;"></div>
+                                </div>
+                                <span class="spec-value">9.3 / 10</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Handling</span>
+                                <div class="spec-bar">
+                                    <div class="spec-fill" style="width: 92%;"></div>
+                                </div>
+                                <span class="spec-value">9.2 / 10</span>
+                            </div>
+                        </div>
+                        <button class="btn-select">Select Car</button>
+                    </div>
+                </div>
 
-2. About the Game:
+                <!-- BMW M5 -->
+                <div class="car-card">
+                    <div class="car-image">
+                        <div class="car-placeholder bmw-m5">
+                            <i class="fas fa-car"></i>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3>BMW M5</h3>
+                        <p class="car-description">Powerful luxury sedan with incredible performance</p>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-label">Top Speed</span>
+                                <div class="spec-bar">
+                                    <div class="spec-fill" style="width: 88%;"></div>
+                                </div>
+                                <span class="spec-value">320 km/h</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Acceleration</span>
+                                <div class="spec-bar">
+                                    <div class="spec-fill" style="width: 95%;"></div>
+                                </div>
+                                <span class="spec-value">9.8 / 10</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Handling</span>
+                                <div class="spec-bar">
+                                    <div class="spec-fill" style="width: 85%;"></div>
+                                </div>
+                                <span class="spec-value">8.5 / 10</span>
+                            </div>
+                        </div>
+                        <button class="btn-select">Select Car</button>
+                    </div>
+                </div>
 
-Describe the game as a 3D racing game set in New York City
-Mention:
-3-lap racing system
-Realistic driving physics
-Stunning city environment
-Competitive racing experience
+                <!-- Lamborghini -->
+                <div class="car-card">
+                    <div class="car-image">
+                        <div class="car-placeholder lamborghini">
+                            <i class="fas fa-car"></i>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3>Lamborghini</h3>
+                        <p class="car-description">Ultimate supercar with extreme speed and agility</p>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-label">Top Speed</span>
+                                <div class="spec-bar">
+                                    <div class="spec-fill" style="width: 97%;"></div>
+                                </div>
+                                <span class="spec-value">350 km/h</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Acceleration</span>
+                                <div class="spec-bar">
+                                    <div class="spec-fill" style="width: 98%;"></div>
+                                </div>
+                                <span class="spec-value">9.9 / 10</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Handling</span>
+                                <div class="spec-bar">
+                                    <div class="spec-fill" style="width: 88%;"></div>
+                                </div>
+                                <span class="spec-value">8.8 / 10</span>
+                            </div>
+                        </div>
+                        <button class="btn-select">Select Car</button>
+                    </div>
+                </div>
 
-3. Cars Section:
+                <!-- Porsche 911 -->
+                <div class="car-card">
+                    <div class="car-image">
+                        <div class="car-placeholder porsche">
+                            <i class="fas fa-car"></i>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3>Porsche 911</h3>
+                        <p class="car-description">Iconic sports car with legendary performance</p>
+                        <div class="car-specs">
+                            <div class="spec">
+                                <span class="spec-label">Top Speed</span>
+                                <div class="spec-bar">
+                                    <div class="spec-fill" style="width: 92%;"></div>
+                                </div>
+                                <span class="spec-value">333 km/h</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Acceleration</span>
+                                <div class="spec-bar">
+                                    <div class="spec-fill" style="width: 92%;"></div>
+                                </div>
+                                <span class="spec-value">9.2 / 10</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Handling</span>
+                                <div class="spec-bar">
+                                    <div class="spec-fill" style="width: 96%;"></div>
+                                </div>
+                                <span class="spec-value">9.6 / 10</span>
+                            </div>
+                        </div>
+                        <button class="btn-select">Select Car</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-Showcase available cars:
-BMW M4
-BMW M5
-Lamborghini
-Porsche 911
-Add car images, short specs, and speed ratings
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Game Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>3D Realistic Graphics</h3>
+                    <p>Experience stunning visual effects with cutting-edge 3D rendering technology and high-definition environments.</p>
+                </div>
 
-4. Game Features:
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>NYC Racing Tracks</h3>
+                    <p>Race through authentic New York City streets with iconic landmarks and dynamic day-night cycles.</p>
+                </div>
 
-3D realistic graphics
-New York City racing tracks
-Multiple cars selection
-Smooth controls
-High-speed competition
-Lap-based racing (3 laps per race)
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Multiple Cars</h3>
+                    <p>Choose from 4 premium cars, each with unique handling characteristics and performance specifications.</p>
+                </div>
 
-5. Screenshots / Gallery:
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Smooth Controls</h3>
+                    <p>Responsive and intuitive controls optimized for both keyboard and gamepad input devices.</p>
+                </div>
 
-Add a grid gallery showing gameplay images
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>High-Speed Competition</h3>
+                    <p>Compete against intelligent AI opponents that adapt to your driving style and racing tactics.</p>
+                </div>
 
-6. Contact / Download Section:
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
+                    <h3>3-Lap Racing</h3>
+                    <p>Master challenging 3-lap races where strategy, precision, and speed determine victory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-Add buttons for:
-Download for PC
-Download for Android
-Optional contact form
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Game Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="image-placeholder-gallery">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <p>NYC Street Racing</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="image-placeholder-gallery">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <p>High-Speed Chase</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="image-placeholder-gallery">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <p>Nitro Boost Effect</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="image-placeholder-gallery">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <p>Night Racing</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="image-placeholder-gallery">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <p>Car Customization</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <div class="image-placeholder-gallery">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <p>Victory Moment</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-7. Design Style:
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2 class="section-title">Download & Play</h2>
+            <div class="download-content">
+                <div class="download-info">
+                    <h3>Ready to Experience the Ultimate Racing Game?</h3>
+                    <p>Download BMW CAR RACING GAME now and start your high-speed adventure in New York City. Available on PC and Android devices.</p>
+                </div>
+                <div class="download-buttons-group">
+                    <button class="btn btn-download">
+                        <i class="fas fa-windows"></i>
+                        <span>Download for PC</span>
+                        <small>1.2 GB</small>
+                    </button>
+                    <button class="btn btn-download">
+                        <i class="fas fa-android"></i>
+                        <span>Download for Android</span>
+                        <small>850 MB</small>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-Dark theme (black, neon blue, red accents)
-Futuristic gaming UI
-Smooth animations and hover effects
-Responsive for mobile and desktop
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>support@bmwracinggame.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>New York City, USA</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-8. Tech Stack:
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BMW CAR RACING GAME</h4>
+                    <p>Experience high-speed 3D racing in the streets of New York City.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#cars">Cars</a></li>
+                        <li><a href="#features">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Download</h4>
+                    <ul>
+                        <li><a href="#">PC Version</a></li>
+                        <li><a href="#">Android Version</a></li>
+                        <li><a href="#">System Requirements</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BMW CAR RACING GAME. All rights reserved. | Designed with <span class="heart">❤</span> for gamers</p>
+            </div>
+        </div>
+    </footer>
 
-HTML, CSS, JavaScript
-Use modern UI libraries (optional: Tailwind CSS or Bootstrap)
+    <script src="js/script.js"></script>
+</body>
+</html>
